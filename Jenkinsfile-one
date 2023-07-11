@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Git Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Ramakanta5555/myhr-api'
-            }
-        }
+//        stage('Git Checkout') {
+//            steps {
+//                git branch: 'main', url: 'https://github.com/Ramakanta5555/myhr-api'
+//           }
+//        }
         stage('maven Build') {
             steps {
                 sh 'mvn clean package'
