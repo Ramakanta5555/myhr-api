@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                echo "${params.branchName}"
-                git branch: 'main', url: 'https://github.com/Ramakanta5555/myhr-api'
+                git branch: "${params.branchName}", url: 'https://github.com/Ramakanta5555/myhr-api'
            }
        }
         stage('maven Build') {
