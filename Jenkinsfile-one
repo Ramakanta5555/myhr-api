@@ -12,11 +12,6 @@ pipeline {
            }
        }
         stage('maven Build') {
-                when{
-            expression{
-                params.branchName == "develop"
-            }
-        }
             steps {
                 sh 'mvn clean package'
             }
