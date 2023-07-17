@@ -15,12 +15,11 @@ pipeline {
         stage('maven Build') {
             steps {
                 sh 'mvn clean package'
+            }
         }
-        
         stage('tomcat Deploy-Dev') {
             steps {
                 tomcatDeploy()
-             }
             }
         }
     }
