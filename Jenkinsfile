@@ -20,6 +20,13 @@ pipeline{
                 echo "Deploying to Dev"
             }
         }
-
+        stage("QA Deploy"){
+            when{
+                branch 'qa'
+            }
+            steps{
+                echo "Deploying to qa"
+            }
+        }
     }
 }
