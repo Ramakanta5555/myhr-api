@@ -1,10 +1,10 @@
-pipelione{
+pipeline{
     agent any
 
     stages{
         stage("git checkout"){
             steps{
-                git url:"https://github.com/Ramakanta5555/myhr-api"
+                git url:"https://github.com/Ramakanta5555/myhr-api", branch: "main"
             }
         }
         stage("Maven Build"){
