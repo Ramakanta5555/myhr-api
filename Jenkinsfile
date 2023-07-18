@@ -28,5 +28,13 @@ pipeline{
                 echo "Deploying to qa"
             }
         }
+        stage("Prod Deploy"){
+            when{
+                branch 'main'
+            }
+            steps{
+                echo "Deploying to main"
+            }
+        }
     }
 }
